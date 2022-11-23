@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Box, CardMedia, Grid, Typography, Container, TextField, Stack, Button } from "@mui/material";
+import { Box, Button,CardMedia, Container, Grid, Stack, TextField, Typography } from "@mui/material";
+import { useEffect,useState } from "react";
 import { useForm } from "react-hook-form"
 
 export const MainContent = () => {
@@ -100,7 +100,7 @@ export const MainContent = () => {
                     }} columns={gridCol} container={true}>
                     {[...Array(gridRow * gridCol)].map((_, i) => {
                         return (
-                            <Grid
+                            <Grid key={i}
                                 sx={{
                                     border: 1,
                                     color: "white",

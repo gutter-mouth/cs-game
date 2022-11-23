@@ -1,4 +1,5 @@
-import { NextPage } from "next";
+import type { NextPage } from "next";
+
 import {HiddenPictureComponent} from "@/components/pages/games/hiddenPicture"
 
 const Home: NextPage = () => {

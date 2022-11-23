@@ -1,34 +1,35 @@
 import {
-  Center,
   Box,
-  Container,
-  Textarea,
   Button,
+  Center,
+  Container,
+  FormControl,
+  FormLabel,
+  Heading,
   Highlight,
   Table,
   TableContainer,
   Tbody,
   Td,
+  Textarea,
   Th,
   Thead,
   Tr,
-  FormControl,
-  FormLabel,
-  Heading,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { FieldValues, useForm } from "react-hook-form";
+import type { FieldValues} from "react-hook-form";
+import { useForm } from "react-hook-form";
 // import { DragDropContext } from "react-beautiful-dnd";
 
 export const MainContent = () => {
-  let [array, setArray] = useState([""]);
-  let [hide, setHide] = useState([""]);
+  const [array, setArray] = useState([]);
+  const [hide, setHide] = useState([""]);
 
   const {
     handleSubmit,
     register,
     setValue,
-    formState: { errors, isSubmitting },
+    formState: { isSubmitting },
   } = useForm();
 
   const onSubmit = (values: FieldValues) => {
@@ -76,7 +77,7 @@ export const MainContent = () => {
                       <Button
                         colorScheme="green"
                         size="sm"
-                        onClick={(e) => {
+                        onClick={() => {
                           setHide([...hide, text]);
                         }}>
                         かくす
@@ -86,8 +87,8 @@ export const MainContent = () => {
                       <Button
                         colorScheme="blue"
                         size="sm"
-                        onClick={(e) => {
-                          setHide(hide.filter((hide, index) => hide !== text));
+                        onClick={() => {
+                          setHide(hide.filter((hide) => hide !== text));
                         }}>
                         みる
                       </Button>

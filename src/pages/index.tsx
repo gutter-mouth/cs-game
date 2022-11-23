@@ -1,4 +1,5 @@
-import { NextPage } from "next";
+import type { NextPage } from "next";
+
 import {TopPageComponent} from "@/components/pages/top"
 
 const Home: NextPage = () => {

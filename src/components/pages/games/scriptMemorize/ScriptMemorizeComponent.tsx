@@ -1,6 +1,8 @@
-import { MainContent } from "./MainContent";
 import { ChakraProvider } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
+
+import { MainContent } from "./MainContent";
+// import { SubContent } from "./SubContent";
 
 const colors = {
   brand: {
